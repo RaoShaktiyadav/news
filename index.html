@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>News App</title>
+    <style>
+      * {
+        font-family: sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      #navbar {
+        display: flex;
+        border: 1px solid black;
+        padding: 20px;
+        justify-content: space-evenly;
+        margin-bottom: 30px;
+      }
+      #navbar > input {
+        width: 70%;
+        height: 50px;
+        border: 1px solid gray;
+        padding-left: 10px;
+      }
+      #navbar > h1 {
+        margin: auto 0px;
+      }
+      #container {
+        display: flex;
+        column-gap: 20px;
+      }
+      #container > div {
+        border: 1px solid black;
+      }
+      #sidebar {
+        border: 2px solid crimson;
+        width: 16%;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+        padding: 20px 0px;
+      }
+      #sidebar > div {
+        border: 1px solid red;
+        width: 60%;
+        background-color: rgb(18, 185, 200);
+        color: white;
+        text-align: center;
+        margin: auto;
+        font-size: 18px;
+        padding: 18px;
+        height: max-content;
+        cursor: pointer;
+      }
+      #results {
+        width: 82%;
+        position: absolute;
+        right: 0;
+        height: max-content;
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+      }
+      .news{
+        border: 2px solid rgb(77, 19, 118);
+      }
+      .news > div:last-child{
+        border: 0px solid teal;
+        padding: 20px;
+      }
+      .news > div:last-child > h3{
+        margin-bottom: 24px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Give Navbar with id "navbar"  -->
+    <div id="navbar"></div>
+    <!-- Navbar will have input with id search_input and a link to home page i.e. index.html -->
+    <!-- Sidebar will have id "sidebar"  -->
+    <div id="sidebar">
+      <div id="in" aria-valuetext="in">India</div>
+      <div id="ch" aria-valuetext="ch">China</div>
+      <div id="us" aria-valuetext="us">USA</div>
+      <div id="uk" aria-valuetext="uk">United Kingdom</div>
+      <div id="nz" aria-valuetext="nz">New-Zealand</div>
+    </div>
+    <div id="results"></div>
+    <!-- Give link to top headlines of countries in sidebar with id as their country codes 
+    india :- in
+    china :- ch
+    usa :- us
+    uk : uk
+    Newzeland :- nz -->
+
+    <!-- Append results inside div with id "results"  -->
+    <!-- News divs will have class "news"  -->
+  </body>
+</html>
+
+<script src="/scripts/index.js" type="module"></script>
